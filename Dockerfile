@@ -11,9 +11,9 @@ COPY climatiseurs.csv /app
 COPY cuisinieres.csv /app
 COPY machine_laver.csv /app
 COPY refrigerateurs.csv /app
-
+COPY requirements.txt /app
 # Installer les dépendances Python
-RUN pip install requirements.txt
+RUN pip install -r requirements.txt   # Installer les dépendances à partir de requirements.txt
 
 # Exposer le port utilisé par Streamlit
 EXPOSE 8500

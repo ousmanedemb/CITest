@@ -5,13 +5,18 @@ FROM python:3.9
 WORKDIR /app
 
 # Copier les fichiers nécessaires dans le conteneur
-COPY Scraper_app_expat.py /app
+COPY TP_GROUPE_7.py /app
+COPY 24049.jpg /app
+COPY climatiseurs.csv /app
+COPY cuisinieres.csv /app
+COPY machine_laver.csv /app
+COPY refrigerateurs.csv /app
 
 # Installer les dépendances Python
-RUN pip install streamlit
+RUN pip install requirements.txt
 
 # Exposer le port utilisé par Streamlit
-EXPOSE 8501
+EXPOSE 8500
 
 # Commande pour exécuter l'application Streamlit
 CMD ["streamlit", "run", "TP_GROUPE_7.py"]
